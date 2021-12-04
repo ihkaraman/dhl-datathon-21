@@ -4,6 +4,7 @@ submission.csv
 *.csv
 Lib/site-packages/__pycache__/cycler.cpython-38.pyc
 *.pyc
+*.cfg
 Lib/site-packages/absl/__init__.py
 Include/
 Lib/
