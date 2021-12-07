@@ -1,7 +1,5 @@
 
-*.csv
-submission.csv
-*.csv
+
 Lib/site-packages/__pycache__/cycler.cpython-38.pyc
 *.pyc
 *.cfg
@@ -11,3 +9,5 @@ Lib/
 Scripts/
 share/
 xgboost/
+data/order_v2.csv
+data/order_v1.csv
