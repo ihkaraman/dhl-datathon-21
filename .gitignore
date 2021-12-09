@@ -11,3 +11,4 @@ share/
 xgboost/
 data/order_v2.csv
 data/order_v1.csv
+*.csv
