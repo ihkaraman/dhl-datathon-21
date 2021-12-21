@@ -2,7 +2,7 @@
 
 ## Data Butchers - Winner
 
-[![N|Solid](https://raw.githubusercontent.com/ihkaraman/ihkaraman/main/images/dhl_datathon_winner.png)](https://www.linkedin.com/feed/update/urn:li:activity:6877662215583891456/)[![N|Solid](https://raw.githubusercontent.com/ihkaraman/ihkaraman/main/images/dhl_datathon_presentation.png)](https://www.linkedin.com/feed/update/urn:li:activity:6877662215583891456/)
+[![N|Solid](https://raw.githubusercontent.com/ihkaraman/ihkaraman/main/images/dhl_datathon_21.png)](https://www.linkedin.com/feed/update/urn:li:activity:6877662215583891456/)
 
 In DHL Datathon 2021, there were 3 different projects; Product Segmentation, Volume Prediction, and Developing a Picking Algorithm. Detailed solution approaches to these projects are presented below.
 
@@ -22,10 +22,10 @@ Using all the features, we tried different regression models ranging from simple
 
 The picking algorithm is developed to collect the placed orders before the shipment date while minimizing the daily wave number under some capacity constraints. These constraints are: first, the daily picked amount cannot exceed a predefined capacity, second, in each wave, a limited number of types of material can be picked. After doing some research, using mathematical models is costly in terms of computation time and because of the time constraint in the operation process, we decided to move on with a heuristic approach to solve the problem in a fast and efficient way. The pseudo-code for the algorithm:
 
-<em>&nbsp;&nbsp;for each day, do:</em>
-<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. add the newly placed orders and the orders that haven't shipped to checklist</em>
-<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. move the items that should be picked that day from checklist to picking_list</em>
-<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. pick all the items from picking_list</em>
+<p><em>&nbsp;&nbsp;for each day, do:</em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. add the newly placed orders and the orders that haven't shipped to checklist</em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. move the items that should be picked that day from checklist to picking_list</em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. pick all the items from picking_list</em></p>
 <em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1 if the daily capacity is not exceeded pick the items as 'normal_picking'</em>
 <em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2 if the daily capacity is exceeded pick the items as 'overwork_picking'</em>
 <em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. If there are still empty places in the waves and daily capacity is not full, do extra picking (wave utilization)</em></li>
