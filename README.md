@@ -24,8 +24,8 @@ The picking algorithm is developed to collect the placed orders before the shipm
 
 <p><span style="font-weight: 400;">for each day, do:</span></p>
 <ol>
-<li><em>add the newly placed orders and the orders that haven&rsquo;t shipped to checklist</em></li>
-<li><em> move the items that should be picked that day from checklist to picking_list</em></li>
+<em>add the newly placed orders and the orders that haven&rsquo;t shipped to checklist</em>
+<em> move the items that should be picked that day from checklist to picking_list</em>
 <li><em> pick all the items from picking_list</em></li>
 </ol>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1 if the daily capacity is not exceeded pick the items as&nbsp; 'normal_picking'&nbsp;</em></p>
