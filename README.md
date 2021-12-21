@@ -26,14 +26,14 @@ The picking algorithm is developed to collect the placed orders before the shipm
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. add the newly placed orders and the orders that haven't shipped to checklist</em></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. move the items that should be picked that day from checklist to picking_list</em></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. pick all the items from picking_list</em></p>
-<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1 if the daily capacity is not exceeded pick the items as 'normal_picking'</em></p>
-<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2 if the daily capacity is exceeded pick the items as 'overwork_picking'</em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1 if the daily capacity is not exceeded pick the items as 'normal_picking'</em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2 if the daily capacity is exceeded pick the items as 'overwork_picking'</em></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. If there are still empty places in the waves and daily capacity is not full, do extra picking (wave utilization)</em></p>
-<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.1 pick the same type of materials that are in the checklist </em></p>
-<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2 if there are still empty places in the waves pick the orders that have the closest shipping date (if there isn't expected order for upcoming days for these materials)</em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.1 pick the same type of materials that are in the checklist </em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2 if there are still empty places in the waves pick the orders that have the closest shipping date (if there isn't expected order for upcoming days for these materials)</em></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. If the daily capacity is still not full, do extra picking</em></p>
-<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.0 control the checklist if there is any bottleneck in the upcoming days</em></p>
-<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.1 if there is any bottleneck, do extra picking to solve this bottleneck</em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.0 control the checklist if there is any bottleneck in the upcoming days</em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.1 if there is any bottleneck, do extra picking to solve this bottleneck</em></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6. print the results as work orders</em></p>
 
 The average capacity utilization of our algorithm is **94%** and the average wave utilization is **99%.**
