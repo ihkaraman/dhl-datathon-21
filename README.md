@@ -2,8 +2,7 @@
 
 ## Data Butchers - Winner
 
-[![N|Solid](https://raw.githubusercontent.com/ihkaraman/ihkaraman/main/images/dhl_datathon_winner.png)](https://www.linkedin.com/feed/update/urn:li:activity:6877662215583891456/)
-[![N|Solid](https://raw.githubusercontent.com/ihkaraman/ihkaraman/main/images/dhl_datathon_presentation.png)](https://www.linkedin.com/feed/update/urn:li:activity:6877662215583891456/)
+[![N|Solid](https://raw.githubusercontent.com/ihkaraman/ihkaraman/main/images/dhl_datathon_winner.png)](https://www.linkedin.com/feed/update/urn:li:activity:6877662215583891456/)[![N|Solid](https://raw.githubusercontent.com/ihkaraman/ihkaraman/main/images/dhl_datathon_presentation.png)](https://www.linkedin.com/feed/update/urn:li:activity:6877662215583891456/)
 
 In DHL Datathon 2021, there were 3 different projects; Product Segmentation, Volume Prediction, and Developing a Picking Algorithm. Detailed solution approaches to these projects are presented below.
 
@@ -37,7 +36,7 @@ The picking algorithm is developed to collect the placed orders before the shipm
 <li><em> If there are still empty places in the waves and daily capacity is not full, do extra picking (wave utilization)</em></li>
 </ol>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.1 pick the same type of materials that are in the checklist&nbsp;</em></p>
-<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2 if there are still empty places in the waves pick the orders that have&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;the closest shipping date (if there isn&rsquo;t expected order for upcoming&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;days for these materials)</em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2 if there are still empty places in the waves pick the orders that have the closest shipping date (if there isn't expected order for upcoming days for these materials)</em></p>
 <ol start="5">
 <li><em> If the daily capacity is still not full, do extra picking</em></li>
 </ol>
