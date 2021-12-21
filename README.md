@@ -22,19 +22,19 @@ Using all the features, we tried different regression models ranging from simple
 
 The picking algorithm is developed to collect the placed orders before the shipment date while minimizing the daily wave number under some capacity constraints. These constraints are: first, the daily picked amount cannot exceed a predefined capacity, second, in each wave, a limited number of types of material can be picked. After doing some research, using mathematical models is costly in terms of computation time and because of the time constraint in the operation process, we decided to move on with a heuristic approach to solve the problem in a fast and efficient way. The pseudo-code for the algorithm:
 
-<p><span style="font-weight: 400;">for each day, do:</span></p>
-<li><em>add the newly placed orders and the orders that haven&rsquo;t shipped to checklist</em><li>
-<li><em> move the items that should be picked that day from checklist to picking_list</em><li>
-<li><em> pick all the items from picking_list</em></li>
-<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1 if the daily capacity is not exceeded pick the items as&nbsp; 'normal_picking'&nbsp;</em></p>
-<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2 if the daily capacity is exceeded pick the items as&nbsp; 'overwork_picking'</em></p>
-<li><em> If there are still empty places in the waves and daily capacity is not full, do extra picking (wave utilization)</em></li>
-<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.1 pick the same type of materials that are in the checklist&nbsp;</em></p>
-<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2 if there are still empty places in the waves pick the orders that have the closest shipping date (if there isn't expected order for upcoming days for these materials)</em></p>
-<li><em> If the daily capacity is still not full, do extra picking</em></li>
-<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.0 control the checklist if there is any bottleneck in the upcoming days</em></p>
-<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.1 if there is any bottleneck, do extra picking to solve this bottleneck</em></p>
-<li><em> print the results as work orders</em></li>
+<em>&nbsp;&nbsp;for each day, do:</em>
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. add the newly placed orders and the orders that haven't shipped to checklist</em>
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. move the items that should be picked that day from checklist to picking_list</em>
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. pick all the items from picking_list</em>
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1 if the daily capacity is not exceeded pick the items as 'normal_picking'</em>
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2 if the daily capacity is exceeded pick the items as 'overwork_picking'</em>
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. If there are still empty places in the waves and daily capacity is not full, do extra picking (wave utilization)</em></li>
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.1 pick the same type of materials that are in the checklist </em>
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.2 if there are still empty places in the waves pick the orders that have the closest shipping date (if there isn't expected order for upcoming days for these materials)</em>
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. If the daily capacity is still not full, do extra picking</em>
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.0 control the checklist if there is any bottleneck in the upcoming days</em>
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.1 if there is any bottleneck, do extra picking to solve this bottleneck</em>
+<em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6. print the results as work orders</em>
 
 The average capacity utilization of our algorithm is **94%** and the average wave utilization is **99%.**
 
